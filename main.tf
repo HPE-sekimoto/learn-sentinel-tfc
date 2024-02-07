@@ -25,4 +25,13 @@ resource "aws_instance" "ubuntu" {
   tags = {
     Name = var.instance_name
   }
+
+  root_block_device {
+    encrypted = "true"
+  }
+  metadata_options {
+    http_tokens = "required"
+  }
+  
+  disable_api_termination = true
 }
