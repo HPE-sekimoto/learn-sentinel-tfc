@@ -19,10 +19,14 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "ubuntu" {
-  ami                    = data.aws_ami.ubuntu.id
-  instance_type          = var.instance_type
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
 
   tags = {
     Name = var.instance_name
+  }
+
+  metadata_options {
+    http_endpoint = "enabled"  # Set this to "enabled" or "disabled"
   }
 }
