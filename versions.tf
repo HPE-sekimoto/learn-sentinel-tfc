@@ -10,7 +10,7 @@ terraform {
     }
   }
 
-  required_version = ">= 0.15"
+  required_version = ">= 1.6.5"
 
   backend "remote" {
     organization = "hpehitcoe"
