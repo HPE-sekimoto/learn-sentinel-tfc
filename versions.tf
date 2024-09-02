@@ -12,12 +12,12 @@ terraform {
 
   required_version = ">= 1.6.5"
 
-  #backend "remote" {
-  #  organization = "hpehitcoe"
+  backend "remote" {
+    organization = "hpehitcoe"
 
-  #  workspaces {
-  #    name = "learn-sentinel-tfc"
-  #  }
-  #}
+    workspaces {
+      name = "learn-sentinel-tfc"
+    }
+  }
 
 }
